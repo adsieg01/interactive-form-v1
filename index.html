@@ -15,7 +15,7 @@
       <h1>Full Stack Conf</h1>
     </header>
 
-    <form action="index.html" method="post">
+    <form action="index.html" method="post" name="form"5\>
               
       <fieldset>         
         <legend>Basic Info</legend>
@@ -74,24 +74,25 @@
           </select>
         </div>                
       </fieldset>
-
-      <fieldset id="activities">
+      
+      <fieldset class="activities">
+       <h3 id="selectError"> </h3>
         <legend>Register for Activities</legend>
-        <label><input type="checkbox" name="all" value="200"> Main Conference — $200</label>
-        <label><input type="checkbox" name="js-frameworks" value="100"> JavaScript Frameworks Workshop — Tuesday 9am-12pm, $100</label>
-        <label><input type="checkbox" name="js-libs" value="100"> JavaScript Libraries Workshop — Tuesday 1pm-4pm, $100</label>
-        <label><input type="checkbox" name="express" value="100"> Express Workshop — Tuesday 9am-12pm, $100</label>
-        <label><input type="checkbox" name="node" value="100"> Node.js Workshop — Tuesday 1pm-4pm, $100</label>          
-        <label><input type="checkbox" name="build-tools" value="100"> Build tools Workshop — Wednesday 9am-12pm, $100</label>
-        <label><input type="checkbox" name="npm" value="100"> npm Workshop — Wednesday 1pm-4pm, $100</label>
-        <legend id="totalPost">Total:</legend>
+        <label><input type="checkbox" name="all"> Main Conference — $200</label>
+        <label><input type="checkbox" name="js-frameworks"> JavaScript Frameworks Workshop — Tuesday 9am-12pm, $100</label>
+        <label><input type="checkbox" name="js-libs"> JavaScript Libraries Workshop — Tuesday 1pm-4pm, $100</label>
+        <label><input type="checkbox" name="express"> Express Workshop — Tuesday 9am-12pm, $100</label>
+        <label><input type="checkbox" name="node"> Node.js Workshop — Tuesday 1pm-4pm, $100</label>          
+        <label><input type="checkbox" name="build-tools"> Build tools Workshop — Wednesday 9am-12pm, $100</label>
+        <label><input type="checkbox" name="npm"> npm Workshop — Wednesday 1pm-4pm, $100</label>
+        <h2 id="cost"> </h2>
       </fieldset>
+      
       <fieldset>
         <legend>Payment Info</legend>
 
         <label for="payment">I'm going to pay with:</label>
         <select id="payment" name="user_payment">
-          <option value="select_method">Select Payment Method</option>
           <option value="credit card">Credit Card</option>
           <option value="paypal">PayPal</option>
           <option value="bitcoin">Bitcoin</option>
@@ -140,16 +141,16 @@
         </div>
 
         <div>
-        	<p>If you selected the PayPal option we'll take you to Paypal's site to set up your billing information, when you click “Register” below.</p>
+        	<p class="pp">If you selected the PayPal option we'll take you to Paypal's site to set up your billing information, when you click “Register” below.</p>
         </div> 
 
         <div>
-        	<p>If you selected the Bitcoin option we'll take you to the Coinbase site to set up your billing information. Due to the nature of exchanging Bitcoin, all Bitcoin transactions will be final.</p>
+        	<p class="bc">If you selected the Bitcoin option we'll take you to the Coinbase site to set up your billing information. Due to the nature of exchanging Bitcoin, all Bitcoin transactions will be final.</p>
         </div>                  
 
       </fieldset>        
         
-      <button type="submit">Register</button>
+      <button id="register" type="submit">Register</button>
       
     </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
