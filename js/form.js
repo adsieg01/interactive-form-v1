@@ -245,6 +245,7 @@ $("#payment").change(function() {
 			}
 		})};
 
+// All required forms are visible when JavaScript is disabled
 	
 	
 
