@@ -15,6 +15,16 @@ $("#title").change(function() {
 // Matching color options to the selected design-----------------------------------
 
 	// I heart JS selection
+
+
+	if( $("#design").val() == 'select theme'){
+		$("#color option[value='cornflowerblue']").hide();
+		$("#color option[value='darkslategrey']").hide();
+		$("#color option[value='gold']").hide();
+		$("#color option[value='tomato']").hide();
+		$("#color option[value='steelblue']").hide();
+		$("#color option[value='dimgrey']").hide();
+
 $("#design").change(function() {
 	if( $("#design").val() == 'heart js'){
 		$("#color option[value='cornflowerblue']").hide();
@@ -197,7 +207,7 @@ $("#payment").change(function() {
 	
 	$("#register").click(function (event) {
 	  var atLeastOneIsChecked = $('input:checkbox').is(':checked');
-	  if (atLeastOneIsChecked==false){
+	  if (atLeastOneIsChecked===false){
 	  	event.preventDefault();
 	  	$("#selectError").text("Select at least one activity").css("color", "red");
 	  }
@@ -206,9 +216,7 @@ $("#payment").change(function() {
 	// Credit card number between 13-16 digits 
 	
 	$("#register").click(function(event){
-		if(($.isNumeric($("#cc-num").val())==false) 
-			|| ($("#cc-num").val().length < 13) 
-			|| ($("#cc-num").val().length > 16))
+		if(($.isNumeric($("#cc-num").val())===false) || ($("#cc-num").val().length < 13) || ($("#cc-num").val().length > 16))
 		{
 			event.preventDefault();
 			$("[for='cc-num']").text("Add a vaild card number").css("color", "red");
@@ -218,8 +226,7 @@ $("#payment").change(function() {
 	//zip code is 5 digits
 
 	$("#register").click(function(event){
-			if(($.isNumeric($("#zip").val())==false) 
-				|| ($("#zip").val().length !== 5)) 
+			if(($.isNumeric($("#zip").val())===false) || ($("#zip").val().length !== 5)) 
 				
 			{
 				event.preventDefault();
@@ -230,21 +237,15 @@ $("#payment").change(function() {
 	//CVV is exactly 3 digits
 
 	$("#register").click(function(event){
-			if(($.isNumeric($("#cvv").val())==false) 
-				|| ($("#cvv").val().length !== 3)) 
+			if(($.isNumeric($("#cvv").val())===false) || ($("#cvv").val().length !== 3)) 
 				
 			{
 				event.preventDefault();
 				$("[for='cvv']").text("Add a valid CVV").css("color", "red");
 			}
-		});
+		})};
 
-	//Alert to correct errors
-	$("#register").click(function(event){
-if($("#register").isDefaultPrevented()==true){
-	alert("Please correct the errors in red");
-}
-		});
+	
 	
 
 
